@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alpha Four Desk e um mapa diario de mercado para BTC, ETH e SOL: niveis, cenarios, risco e contexto de mercado. As previsoes sao publicadas todos os dias apos 08:00 GMT.">
+  <title>Alpha Four Desk | Mapa diario de mercado para BTC, ETH e SOL</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://a4desk.netlify.app/pt.html">
+  <meta property="og:title" content="Alpha Four Desk | Mapa diario de mercado para BTC, ETH e SOL">
+  <meta property="og:description" content="Mapa diario de mercado para BTC, ETH e SOL: niveis, cenarios, risco e contexto. As previsoes sao publicadas todos os dias apos 08:00 GMT.">
+  <meta property="og:image" content="https://a4desk.netlify.app/images/hero-market-panels.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alpha Four Desk | Mapa diario de mercado para BTC, ETH e SOL">
+  <meta name="twitter:description" content="Mapa diario de mercado para BTC, ETH e SOL: niveis, cenarios, risco e contexto. As previsoes sao publicadas todos os dias apos 08:00 GMT.">
+  <meta name="twitter:image" content="https://a4desk.netlify.app/images/hero-market-panels.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="images/afd-logo.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=19">
+  <style>
+    .pvf-date {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .pvf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: min(1280px, calc(100% - 40px));
+      margin: 0 auto 20px;
+    }
+    .pvf-card {
+      background: var(--card);
+      border-radius: var(--floating-card-radius);
+      padding: 20px 22px;
+      border: 1px solid var(--floating-card-border);
+      box-shadow: var(--floating-card-shadow);
+    }
+    .pvf-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pvf-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pvf-badge--hit     { background: #dcfce7; color: #16a34a; }
+    .pvf-badge--partial { background: var(--premium-gold-soft); color: #92650a; }
+    .pvf-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .pvf-col-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 12px;
+    }
+    .pvf-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--market);
+      margin-bottom: 6px;
+    }
+    .pvf-col-inner p { font-size: 13px; margin: 0; line-height: 1.5; color: var(--ink); }
+    .pvf-facts {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+    .pvf-facts li::before { content: "· "; color: var(--muted); }
+    .pvf-summary {
+      width: min(1280px, calc(100% - 40px));
+      margin: 0 auto 12px;
+      background: var(--card);
+      border: 1px solid var(--floating-card-border);
+      box-shadow: var(--floating-card-shadow);
+      border-radius: var(--floating-card-radius);
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .pvf-summary-assets {
+      display: flex;
+      gap: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .pvf-summary p { margin: 0; font-size: 14px; color: var(--muted); }
+    .pvf-note {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+      width: min(1280px, calc(100% - 40px));
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pvf-note a { color: var(--accent); text-decoration: underline; }
+    @media (max-width: 980px) {
+      .pvf-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .pvf-grid, .pvf-summary, .pvf-note { width: calc(100% - 32px); }
+      .pvf-row { grid-template-columns: 1fr; }
+      .pvf-summary { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Alpha Four Desk">
+      <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
+      <strong>Alpha Four Desk<small>Mapa diario de mercado</small></strong>
+    </a>
+    <nav id="primary-nav" aria-label="Navegacao principal">
+      <a href="#what" data-nav-section="what">Sobre</a>
+      <a href="#subscription" data-nav-section="subscription">Conteudo</a>
+      <a href="#difference" data-nav-section="difference">Abordagem</a>
+      <a href="#methodology" data-nav-section="methodology">Metodo</a>
+      <a href="#sample" data-nav-section="sample">Exemplo</a>
+      <a href="#premium-sample" data-nav-section="premium-sample">Premium</a>
+      <a href="#forecast-vs-fact" data-nav-section="forecast-vs-fact">Facto</a>
+      <a href="#glossary" data-nav-section="glossary">Glossario</a>
+      <a href="#plans" data-nav-section="plans">Precos</a>
+      <a href="#faq" data-nav-section="faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="language-switcher">
+        <button type="button" class="language-toggle" aria-label="Escolher idioma" aria-expanded="false">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>
+            <path d="M3.5 12h17M12 3c2.2 2.3 3.3 5.3 3.3 9S14.2 18.7 12 21M12 3C9.8 5.3 8.7 8.3 8.7 12S9.8 18.7 12 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="language-menu" hidden>
+          <a href="index.html">Русский</a>
+          <a href="en.html">English</a>
+          <a href="uk.html">Українська</a>
+          <a href="de.html">Deutsch</a>
+          <a href="es.html">Español</a>
+          <a class="active" href="pt.html">Português</a>
+        </div>
+      </div>
+      <a class="header-cta" href="#plans">Obter acesso</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="crypto-btc">BTC</span> / <span class="crypto-eth">ETH</span> / <span class="crypto-sol">SOL</span> · mapa diario de mercado</p>
+          <h1>Mapa diario de <span class="title-btc">BTC</span>, <span class="title-eth">ETH</span> e <span class="title-sol">SOL</span> com base na estrutura de opcoes</h1>
+          <p class="hero-intro">Niveis-chave, cenarios, risco e logica do dia em um mapa de mercado claro. BTC, ETH e SOL sao analisados pelo regime gamma, niveis de opcoes e vencimentos proximos, para mostrar onde o preco pode estabilizar, onde pode acelerar e quais zonas realmente moldam a sessao.</p>
+          <p class="release-note">As previsoes sao publicadas todos os dias apos 08:00 GMT.</p>
+          <div class="actions">
+            <a class="button primary" href="#plans">Obter acesso</a>
+            <a class="button secondary" href="#sample">Ver exemplo</a>
+          </div>
+        </div>
+        <aside class="brief-preview" aria-label="Exemplo de estrutura GEX">
+          <div class="hero-dashboard-panel">
+            <img src="images/hero-market-panels.png" alt="Paineis de dashboard de mercado para BTC, ETH e SOL">
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="what" class="section white">
+      <div class="what-combined">
+        <div>
+          <p class="eyebrow">O que e</p>
+          <h2>Um mapa diario de mercado sem ruido</h2>
+          <div class="text-stack compact">
+            <p>Alpha Four Desk e uma analise diaria do mercado cripto para traders que precisam de uma visao calma e estruturada de <span class="crypto-btc">BTC</span>, <span class="crypto-eth">ETH</span> e <span class="crypto-sol">SOL</span>. As previsoes sao publicadas todos os dias apos 08:00 GMT. Em vez de um fluxo de opinioes, voce recebe um plano de trabalho para o dia: zonas importantes, cenario mais provavel e condicoes que invalidam a ideia.</p>
+            <p>O resultado nao e uma previsao vaga. E um mapa de decisao: onde o mercado pode se sustentar, onde o impulso pode aparecer, onde esta o risco e o que precisa acontecer para mudar o plano.</p>
+          </div>
+        </div>
+        <div class="audience-compact">
+          <div class="photo-panel compact-photo gex-photo"><img src="images/hero-gex-dashboard.png" alt="Dashboard GEX com estrutura de opcoes de SOL, niveis e zonas de gamma"></div>
+          <p class="eyebrow">Para quem</p>
+          <div class="lines compact-lines">
+            <p>Traders intraday que precisam de um mapa claro do dia sem ruido extra.</p>
+            <p>Traders posicionais que querem cenarios em vez de reagir a cada candle.</p>
+            <p>Investidores privados e equipes que valorizam niveis, contexto e pontos de invalidacao.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subscription" class="section subscription-section">
+      <div class="section-heading">
+        <p class="eyebrow">Conteudo</p>
+        <h2>O que o assinante recebe</h2>
+        <p>Nao e apenas mais um resumo de mercado, mas um mapa diario pratico: niveis-chave, cenario base, risco e o ponto onde a ideia deixa de funcionar.</p>
+      </div>
+      <div class="card-grid six subscription-grid">
+        <article><i></i><h3>Analise diaria de BTC, ETH e SOL</h3><p>Uma visao compacta, mas completa, dos tres principais instrumentos, sem opinioes soltas.</p></article>
+        <article><i></i><h3>Niveis importantes para hoje</h3><p>Zonas de atracao, rejeicao e invalidacao que sao relevantes para a sessao atual.</p></article>
+        <article><i></i><h3>Cenario principal e plano alternativo</h3><p>Um mapa de resultados possiveis: cenario base, cenario alternativo e condicoes de transicao.</p></article>
+        <article><i></i><h3>Risco e invalidacao</h3><p>Voce ve onde o cenario ainda vale e onde ele nao deve mais ser defendido.</p></article>
+        <article><i></i><h3>Logica de mercado sem excesso</h3><p>Mostramos nao apenas os niveis, mas por que essas zonas importam no dia.</p></article>
+        <article><i></i><h3>Previsao contra realidade</h3><p>No fim do dia, o plano e comparado com o que o mercado realmente fez.</p></article>
+      </div>
+    </section>
+
+    <section id="difference" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Diferenca</p>
+        <h2>Analise em vez de ruido</h2>
+        <p>Nao publicamos comandos cegos nem tentamos adivinhar o mercado com uma frase. Primeiro vem o contexto, depois niveis, cenario, risco e um ponto claro de invalidacao.</p>
+      </div>
+      <div class="card-grid three">
+        <article><h3>Nao sao sinais caoticos</h3><p>Cada conclusao esta ligada a contexto, nivel e invalidacao. E uma base analitica para sua propria decisao.</p></article>
+        <article><h3>Nao e teoria pesada</h3><p>O relatorio mantem apenas o que ajuda hoje: contexto, niveis, cenario e risco.</p></article>
+        <article><h3>Nao e adivinhacao</h3><p>Primeiro definimos caminhos possiveis e depois as condicoes que os confirmam ou cancelam.</p></article>
+      </div>
+    </section>
+
+    <section id="methodology" class="section white">
+      <div class="section-heading">
+        <p class="eyebrow">Metodo</p>
+        <h2>Como lemos o mercado</h2>
+        <p>Alpha Four Desk se baseia em uma disciplina simples: entender o contexto, identificar niveis importantes, descrever o cenario e definir onde a ideia deixa de funcionar.</p>
+      </div>
+      <div class="methodology-grid">
+        <article><i></i><h3>Contexto primeiro</h3><p>Olhamos estado de mercado, pressao de posicionamento e zonas que importam para a sessao atual.</p></article>
+        <article><i></i><h3>Sem adivinhar</h3><p>O trabalho se baseia em cenario, confirmacao, invalidacao e controle de risco.</p></article>
+        <article><i></i><h3>Condicoes de confirmacao</h3><p>Um cenario ganha peso apenas depois que o preco reage nas zonas-chave.</p></article>
+        <article><i></i><h3>Previsao contra realidade</h3><p>O mapa diario e conferido com o comportamento real do mercado, nao com sensacoes.</p></article>
+      </div>
+    </section>
+
+    <section id="sample" class="section white">
+      <div class="section-heading">
+        <p class="eyebrow">Card de exemplo</p>
+        <h2>Revisao diaria em formato pratico</h2>
+        <p>Os dados de demonstracao mostram a estrutura do relatorio. Os valores reais sao atualizados na analise diaria.</p>
+      </div>
+      <div class="market-grid">
+        <article class="market-card">
+          <div class="market-head"><div class="coin-title"><img class="coin-logo" src="images/bitcoin-btc-logo.svg" alt="BTC"><span class="asset-btc">BTC</span></div><div><span>Preco</span><strong>$67,240</strong></div></div>
+          <div class="metric-grid"><div><dt>A1</dt><dd>$66,900</dd></div><div><dt>Flip</dt><dd>$66,700</dd></div><div><dt>Regime</dt><dd class="signal">Positivo</dd></div><div><dt>Probabilidade</dt><dd class="signal">62%</dd></div></div>
+          <dl><dt>Cenario base</dt><dd>Manter acima de A1 e mover em direcao a zona superior de liquidez.</dd><dt>Entrada</dt><dd>$66,950-67,150</dd></dl>
+          <div class="risk-box"><div><dt>Stop</dt><dd class="risk">$66,700</dd></div><div><dt>Invalidacao</dt><dd class="risk">Aceitacao abaixo de $66,600</dd></div></div>
+          <dl><dt>Alvos</dt><dd>$68,800 / $70,000</dd><dt>Risco</dt><dd class="signal">Moderado</dd><dt>Zona</dt><dd>$66,900-67,200</dd></dl>
+        </article>
+        <article class="market-card">
+          <div class="market-head"><div class="coin-title"><img class="coin-logo" src="images/ethereum-eth-logo.svg" alt="ETH"><span class="asset-eth">ETH</span></div><div><span>Preco</span><strong>$2,045</strong></div></div>
+          <div class="metric-grid"><div><dt>A1</dt><dd>$2,080</dd></div><div><dt>Flip</dt><dd>$2,050</dd></div><div><dt>Regime</dt><dd class="signal">Positivo</dd></div><div><dt>Probabilidade</dt><dd class="signal">58%</dd></div></div>
+          <dl><dt>Cenario base</dt><dd>Reversao a media dentro do intervalo perto de Flip.</dd><dt>Entrada</dt><dd>$2,035-2,055</dd></dl>
+          <div class="risk-box"><div><dt>Stop</dt><dd class="risk">$2,010</dd></div><div><dt>Invalidacao</dt><dd class="risk">Aceitacao abaixo de $2,000</dd></div></div>
+          <dl><dt>Alvos</dt><dd>$2,085 / $2,120</dd><dt>Risco</dt><dd class="signal">Elevado</dd><dt>Zona</dt><dd>$2,035-2,080</dd></dl>
+        </article>
+        <article class="market-card">
+          <div class="market-head"><div class="coin-title"><img class="coin-logo" src="images/solana-sol-logo.png" alt="SOL"><span class="asset-sol">SOL</span></div><div><span>Preco</span><strong>$81.4</strong></div></div>
+          <div class="metric-grid"><div><dt>A1</dt><dd>$82.0</dd></div><div><dt>Flip</dt><dd>$79.0</dd></div><div><dt>Regime</dt><dd class="signal">Positivo / beta alta</dd></div><div><dt>Probabilidade</dt><dd class="signal">55%</dd></div></div>
+          <dl><dt>Cenario base</dt><dd>O vies direcional permanece, mas falsos rompimentos sao provaveis.</dd><dt>Entrada</dt><dd>$80.8-81.6</dd></dl>
+          <div class="risk-box"><div><dt>Stop</dt><dd class="risk">$79.4</dd></div><div><dt>Invalidacao</dt><dd class="risk">Aceitacao abaixo de $78.0</dd></div></div>
+          <dl><dt>Alvos</dt><dd>$84.0 / $86.5</dd><dt>Risco</dt><dd class="signal">Alto</dd><dt>Zona</dt><dd>$80.5-82.0</dd></dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="premium-sample" class="section premium-section">
+      <div class="section-heading">
+        <p class="eyebrow premium-eyebrow">Assinatura Premium</p>
+        <h2>O que recebe o assinante Premium</h2>
+        <p>Analise ampliada por instrumento: cenario, niveis, risco, pontos de invalidacao da ideia e contexto das expiracoes proximas.</p>
+      </div>
+      <div class="premium-grid">
+        <article class="premium-card eth-premium">
+          <div class="premium-head">
+            <div class="premium-instrument">
+              <span><img src="images/ethereum-eth-logo.svg" alt="ETH"></span>
+              <div><h3>ETH · 16APR26</h3><p><span class="crypto-eth">ETH</span> futuros/spot + opcoes · 16APR26 (24h DTE, todos os prazos)</p></div>
+            </div>
+            <b>COMBO GEX</b>
+          </div>
+          <div class="premium-block"><h4>COMBO GEX - Parametros principais</h4><div class="premium-metrics"><p><span>Preco</span><b>2,316</b></p><p><span>A1</span><b>2,350 (0DTE) / 2,300 total</b></p><p><span>Flip</span><b>2,317 (0DTE) / 2,014 total</b></p><p><span>Regime</span><b>gamma positiva</b></p></div></div>
+          <div class="premium-block premium-priority"><h4>Cenario principal</h4><em>Probabilidade: ~60-62%</em><p>O cenario base e reacumulacao acima de 2,300 e trabalho para o cluster intradiario superior em 2,325-2,350. <span class="crypto-eth">ETH</span> nao parece fraco: o regime geral e positivo, o A1 total ja esta abaixo do preco, e o ima diario local fica acima. Isso cria um vies altista controlado, mas nao significa tendencia sem pausas.</p></div>
+          <div class="premium-block premium-priority"><h4>Niveis de trading</h4><div class="premium-rows"><p><span>Entrada</span><b>Long: 2,308-2,318</b></p><p><span>Stop</span><b>2,294</b></p><p><span>Invalidacao da ideia</span><b>Aceitacao horaria abaixo de 2,290</b></p><p><span>Alvos</span><b>TP1: 2,325 · TP2: 2,350 · TP3: 2,400</b></p><p><span>Risco</span><b>Moderado. Relacao risco/retorno em torno de 1:1.5-1:2</b></p></div></div>
+          <div class="premium-block"><h4>Zona de pinning / cenario alternativo</h4><strong>2,300-2,350 e a zona local de equilibrio intradiario.</strong><div class="premium-two"><div><span>Area-chave de observacao</span><p>2,300 - A1 total e suporte inferior do dia</p><p>2,317 - 0DTE Flip</p><p>2,350 - zona superior do cenario</p></div><div><span>Dois sinais de confirmacao</span><p><b>1.</b> No teste de 2,300-2,310: crescimento do bid passivo e ausencia de continuidade baixista estavel depois de venda agressiva.</p><p><b>2.</b> Na aproximacao de 2,317-2,325: se o vendedor nao consegue devolver rapido o preco para baixo de Flip, a chance de movimento ate 2,350 aumenta bastante.</p></div></div></div>
+          <div class="premium-block premium-priority"><h4>Logica</h4><div class="premium-logic"><p>No regime de gamma positiva, os dealers suavizam oscilacoes e seguram o mercado ao redor de nodos fortes de opcoes.</p><p>P/C Ratio: 0.34 - vies altista, mas moderado.</p><p>TOTAL: 2,300 / 2,400 / 2,500</p><p>0DTE: 2,317 / 2,350</p><p>Estrutura de prazos: expiracoes proximas sustentam trabalho acima, mas sugerem deslocamento controlado, nao aceleracao sem pausa.</p></div></div>
+          <div class="premium-block mindset"><h4>Abordagem sem adivinhar</h4><p>Nao ficar vendido no mercado so porque ele ja subiu. Enquanto o preco se mantem acima de 2,300, a logica base continua sendo range com retorno para cima em direcao a 2,350.</p></div>
+        </article>
+        <article class="premium-card sol-premium">
+          <div class="premium-head">
+            <div class="premium-instrument">
+              <span><img src="images/solana-sol-logo.png" alt="SOL"></span>
+              <div><h3>SOL · 16APR26</h3><p><span class="crypto-sol">SOL</span> futuros/spot + opcoes · 16APR26 (24h DTE, todos os prazos)</p></div>
+            </div>
+            <b>COMBO GEX</b>
+          </div>
+          <div class="premium-block"><h4>COMBO GEX - Parametros principais</h4><div class="premium-metrics"><p><span>Preco</span><b>82.9</b></p><p><span>A1</span><b>82.0 (0DTE) / 80.0 total</b></p><p><span>Flip</span><b>82.7 (0DTE) / 85.1 total</b></p><p><span>Regime</span><b>gamma negativa</b></p></div></div>
+          <div class="premium-block premium-priority"><h4>Cenario principal</h4><em>Probabilidade: ~55-57%</em><p>O cenario base e retorno fracassado e disputa na zona 82.7-84.0, com risco de nova pressao para baixo ate 82 / 80. Um repique local acima de 82.7 sozinho ainda nao coloca o ativo em regime positivo estavel enquanto o Flip total em 85.1 permanecer acima do mercado.</p></div>
+          <div class="premium-block premium-priority"><h4>Niveis de trading</h4><div class="premium-rows"><p><span>Entrada</span><b>Short agressivo: 83.1-83.8</b></p><p><span>Stop</span><b>84.4</b></p><p><span>Invalidacao da ideia</span><b>Aceitacao horaria acima de 85.1</b></p><p><span>Alvos</span><b>TP1: 82.0 · TP2: 80.0 · TP3: 79.0</b></p><p><span>Risco</span><b>Elevado. Gamma negativa amplia impulsos, por isso o tamanho da posicao deve ser menor e o stop mais rigido.</b></p></div></div>
+          <div class="premium-block"><h4>Zona de pinning / cenario alternativo</h4><strong>82.7-84.0 e a zona de disputa de curto prazo entre o repique local e o regime baixista mais amplo.</strong><div class="premium-two"><div><span>Area-chave de observacao</span><p>82.0 - suporte diario local</p><p>82.7 - 0DTE Flip</p><p>84.0 - nodo intradiario superior mais proximo</p><p>85.1 - principal gatilho do regime</p></div><div><span>Dois sinais de confirmacao</span><p><b>1.</b> Para a ideia de short: crescimento de compras agressivas na zona 83-84 sem uptrend estavel e retorno rapido para baixo de 82.7.</p><p><b>2.</b> Para cancelar a ideia de short: aceitacao acima de 84.0 com sustentacao, recuos menores e serie de capturas de bid em direcao a 85+.</p></div></div></div>
+          <div class="premium-block premium-priority"><h4>Logica</h4><div class="premium-logic"><p>No regime de gamma negativa, os dealers com mais frequencia fazem hedge na direcao do movimento e ampliam o impulso ja iniciado.</p><p>P/C Ratio: -0.29 - vies baixista.</p><p>TOTAL: gatilho geral do regime = 85.1</p><p>0DTE: 82 / 82.7 / 84</p><p>Estrutura de prazos: a curva curta permite repique, mas nao entrega o mesmo suporte superior que em <span class="crypto-btc">BTC</span>/<span class="crypto-eth">ETH</span>.</p></div></div>
+          <div class="premium-block mindset"><h4>Abordagem sem adivinhar</h4><p><span class="crypto-sol">SOL</span> nao deve ser lido pelas mesmas regras de <span class="crypto-btc">BTC</span> e <span class="crypto-eth">ETH</span>. Enquanto o mercado estiver abaixo de 85.1, a logica base continua sendo um vies direcional tatico.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="forecast-vs-fact" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Previsão vs. Facto</p>
+        <h2>PREVISÃO VS FACTO · COMBO GEX</h2>
+        <p>Todas as noites comparamos o cenário matinal com o que o mercado realmente fez. Sem retoques: um acerto parcial é um acerto parcial.</p>
+      </div>
+      <div class="pvf-date">21 de abril de 2026 · COMBO GEX</div>
+      <div class="pvf-grid">
+        <article class="pvf-card">
+          <div class="pvf-head">
+            <div class="coin-title"><img class="coin-logo" src="images/bitcoin-btc-logo.svg" alt="BTC"><span class="asset-btc">BTC</span></div>
+            <span class="pvf-badge pvf-badge--partial">⚠️ Parcial / ligeiramente positivo</span>
+          </div>
+          <div class="pvf-row">
+            <div class="pvf-col-inner"><span class="pvf-label">Previsão</span><p>Manter 74.500–75.000 e retorno a 75.554</p></div>
+            <div class="pvf-col-inner"><span class="pvf-label">Facto</span><ul class="pvf-facts"><li>Base mantida</li><li>Retorno a 75.554 ocorreu</li><li>Sem aceitação confiante acima</li></ul></div>
+          </div>
+        </article>
+        <article class="pvf-card">
+          <div class="pvf-head">
+            <div class="coin-title"><img class="coin-logo" src="images/ethereum-eth-logo.svg" alt="ETH"><span class="asset-eth">ETH</span></div>
+            <span class="pvf-badge pvf-badge--partial">⚠️ Parcial / fracamente positivo</span>
+          </div>
+          <div class="pvf-row">
+            <div class="pvf-col-inner"><span class="pvf-label">Previsão</span><p>Manter 2.275–2.300 e retorno a 2.345</p></div>
+            <div class="pvf-col-inner"><span class="pvf-label">Facto</span><ul class="pvf-facts"><li>Base mantida</li><li>Invalidação não rompida</li><li>Mercado não atingiu 2.345</li></ul></div>
+          </div>
+        </article>
+        <article class="pvf-card">
+          <div class="pvf-head">
+            <div class="coin-title"><img class="coin-logo" src="images/solana-sol-logo.png" alt="SOL"><span class="asset-sol">SOL</span></div>
+            <span class="pvf-badge pvf-badge--hit">✅ Boa previsão</span>
+          </div>
+          <div class="pvf-row">
+            <div class="pvf-col-inner"><span class="pvf-label">Previsão</span><p>Retorno local a 85,0–86,0</p></div>
+            <div class="pvf-col-inner"><span class="pvf-label">Facto</span><ul class="pvf-facts"><li>Mercado manteve-se acima de 83,4</li><li>Retornou a 85,0–86,0</li><li>Invalidação não rompida</li></ul></div>
+          </div>
+        </article>
+      </div>
+      <div class="pvf-summary">
+        <span class="pvf-summary-assets"><span>BTC ⚠️</span><span>ETH ⚠️</span><span>SOL ✅</span></span>
+        <p>Melhor análise do dia — SOL. Ideia funcional no BTC. Execução mais fraca no ETH.</p>
+      </div>
+      <p class="pvf-note">A análise noturna previsão vs. facto está incluída na <a href="#plans">subscrição Premium</a>.</p>
+    </section>
+
+    <section id="glossary" class="section white">
+
+      <div class="section-heading">
+        <p class="eyebrow">Glossario</p>
+        <h2>Linguagem de mercado sem complexidade extra</h2>
+        <p>Definicoes curtas dos termos usados nos relatorios diarios.</p>
+      </div>
+      <div class="glossary-preview-grid">
+        <article><h3>GEX</h3><small>Exposicao gamma</small><p>Exposicao gamma de opcoes: zona em que o hedge dos dealers pode amortecer ou ampliar o movimento de preco.</p></article>
+        <article><h3>Flip</h3><small>Mudanca de gamma</small><p>Nivel em que o regime de gamma muda.</p></article>
+        <article><h3>A1</h3><small>Ima mais proximo / nivel ancora</small><p>O ima de preco mais proximo e ponto-chave do cenario diario.</p></article>
+        <article><h3>Gamma positiva</h3><p>Regime em que o hedge costuma amortecer movimento e sustentar comportamento de range.</p></article>
+        <article><h3>Gamma negativa</h3><p>Regime em que o hedge pode ampliar movimento e sustentar impulso direcional.</p></article>
+        <article><h3>Invalidacao</h3><p>Nivel em que o cenario deixa de ser valido.</p></article>
+      </div>
+    </section>
+
+    <section id="plans" class="section plans-section">
+      <div class="section-heading">
+        <p class="eyebrow">Precos</p>
+        <h2>Escolha a profundidade da analise diaria</h2>
+        <p>Basic e um ponto de entrada forte para a leitura diaria do mercado. Premium e o formato principal para logica mais profunda, risco, cenario alternativo e revisao de previsao versus realidade. As previsoes sao publicadas todos os dias apos 08:00 GMT.</p>
+      </div>
+      <div class="plan-cards">
+        <article>
+          <p class="eyebrow">Basic</p>
+          <h3>30 USDT / mes</h3>
+          <p>Um relatorio diario conciso para trabalho independente: niveis-chave, cenario base e ponto de invalidacao.</p>
+          <ul class="plan-features">
+            <li>Resumo diario curto do mercado apos 08:00 GMT</li>
+            <li>Niveis-chave de BTC, ETH e SOL</li>
+            <li>Cenario base do dia</li>
+            <li>Ponto de invalidacao</li>
+            <li>Contexto curto de mercado</li>
+          </ul>
+          <a class="button primary" href="https://t.me/A4DeskAccessBot?start=basic" target="_blank" rel="noopener">Solicitar no Telegram</a>
+        </article>
+        <article class="featured">
+          <p class="eyebrow">Premium</p>
+          <h3>90 USDT / mes</h3>
+          <p>O principal produto da Alpha Four Desk: trabalho de cenario mais profundo para cada instrumento, com logica, risco e condicoes de revisao do plano.</p>
+          <ul class="plan-features">
+            <li>Tudo do Basic</li>
+            <li>Relatorio Premium diario apos 08:00 GMT</li>
+            <li>Analise de cenario expandida</li>
+            <li>Cenario alternativo</li>
+            <li>Logica detalhada do movimento de preco</li>
+            <li>Risco / invalidacao / alvos</li>
+            <li>Contexto de vencimentos proximos</li>
+            <li>Previsao contra realidade</li>
+          </ul>
+          <a class="button light" href="https://t.me/A4DeskAccessBot?start=premium" target="_blank" rel="noopener">Solicitar no Telegram</a>
+        </article>
+      </div>
+      <p class="plan-contact-note">O acesso e solicitado pelo bot do Telegram <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noopener">@A4DeskAccessBot</a>: escolha um plano e o bot abrira a solicitacao. Para contato direto: <a href="https://t.me/A4Desk" target="_blank" rel="noopener">@A4Desk</a>. As previsoes sao publicadas todos os dias apos 08:00 GMT.</p>
+    </section>
+
+    <section id="faq" class="section white">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Respostas curtas</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Sao sinais de trading?</summary><p>Nao. Isso e analise baseada em cenario: niveis, probabilidades, contexto, risco e invalidacao. A decisao final e sempre do usuario.</p></details>
+        <details><summary>Para quem e?</summary><p>Para traders intraday e posicionais que precisam de um mapa diario calmo para BTC, ETH e SOL.</p></details>
+        <details><summary>Como solicito acesso?</summary><p>Escolha Basic ou Premium e clique em "Solicitar no Telegram". O bot <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noopener">@A4DeskAccessBot</a> abrira a solicitacao.</p></details>
+        <details><summary>Com que frequencia os relatorios sao publicados?</summary><p>A previsao e o mapa de mercado sao publicados todos os dias apos 08:00 GMT.</p></details>
+        <details><summary>Isso e recomendacao de investimento?</summary><p>Nao. O material e analitico e informativo, e nao representa recomendacao individual de investimento.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <div class="footer-brand"><span class="brand-mark inverse"><i></i><i></i><i></i><i></i></span><strong>Alpha Four Desk<small>Mapa diario de mercado</small></strong></div>
+      <p>Mapa diario de mercado para BTC, ETH e SOL: contexto, niveis, cenarios e risco. As previsoes sao publicadas todos os dias apos 08:00 GMT. O acesso e solicitado pelo <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noopener">@A4DeskAccessBot</a>. Contato direto: <a href="https://t.me/A4Desk" target="_blank" rel="noopener">@A4Desk</a>.</p>
+    </div>
+    <div class="footer-risk">
+      <strong>Aviso de risco</strong>
+      <p>Os materiais da Alpha Four Desk sao analiticos e informativos. Eles nao sao sinais de trading nem recomendacao individual de investimento. Tamanho de posicao, decisao e risco sao sempre responsabilidade do usuario.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

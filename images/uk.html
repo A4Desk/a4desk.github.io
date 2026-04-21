@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alpha Four Desk — щоденна ринкова карта BTC, ETH і SOL: рівні, сценарії, ризик і контекст ринку. Прогнози виходять щодня після 08:00 GMT.">
+  <title>Alpha Four Desk | Щоденна ринкова карта BTC, ETH і SOL</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://a4desk.netlify.app/uk.html">
+  <meta property="og:title" content="Alpha Four Desk | Щоденна ринкова карта BTC, ETH і SOL">
+  <meta property="og:description" content="Щоденна ринкова карта BTC, ETH і SOL: рівні, сценарії, ризик і контекст ринку. Прогнози виходять щодня після 08:00 GMT.">
+  <meta property="og:image" content="https://a4desk.netlify.app/images/hero-market-panels.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alpha Four Desk | Щоденна ринкова карта BTC, ETH і SOL">
+  <meta name="twitter:description" content="Щоденна ринкова карта BTC, ETH і SOL: рівні, сценарії, ризик і контекст ринку. Прогнози виходять щодня після 08:00 GMT.">
+  <meta name="twitter:image" content="https://a4desk.netlify.app/images/hero-market-panels.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="images/afd-logo.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=19">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Alpha Four Desk">
+      <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
+      <strong>Alpha Four Desk<small>Щоденна ринкова карта</small></strong>
+    </a>
+    <nav id="primary-nav" aria-label="Основна навігація">
+      <a href="#what" data-nav-section="what">Про нас</a>
+      <a href="#subscription" data-nav-section="subscription">Що всередині</a>
+      <a href="#difference" data-nav-section="difference">Підхід</a>
+      <a href="#methodology" data-nav-section="methodology">Метод</a>
+      <a href="#sample" data-nav-section="sample">Приклад</a>
+      <a href="#premium-sample" data-nav-section="premium-sample">Premium</a>
+      <a href="#forecast-vs-fact" data-nav-section="forecast-vs-fact">Факт</a>
+      <a href="#glossary" data-nav-section="glossary">Глосарій</a>
+      <a href="#plans" data-nav-section="plans">Ціни</a>
+      <a href="#faq" data-nav-section="faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Відкрити меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="language-switcher">
+        <button type="button" class="language-toggle" aria-label="Обрати мову" aria-expanded="false">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>
+            <path d="M3.5 12h17M12 3c2.2 2.3 3.3 5.3 3.3 9S14.2 18.7 12 21M12 3C9.8 5.3 8.7 8.3 8.7 12S9.8 18.7 12 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="language-menu" hidden>
+          <a href="index.html">Русский</a>
+          <a href="en.html">English</a>
+          <a class="active" href="uk.html">Українська</a>
+          <a href="de.html">Deutsch</a>
+          <a href="es.html">Español</a>
+          <a href="pt.html">Português</a>
+        </div>
+      </div>
+      <a class="header-cta" href="#plans">Отримати доступ</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="crypto-btc">BTC</span> / <span class="crypto-eth">ETH</span> / <span class="crypto-sol">SOL</span> · ринкова карта дня</p>
+          <h1>Щоденна ринкова карта <span class="title-btc">BTC</span>, <span class="title-eth">ETH</span> і <span class="title-sol">SOL</span> на основі опціонної структури</h1>
+          <p class="hero-intro">Ключові рівні, сценарії, ризик і логіка дня в одній зібраній ринковій карті. BTC, ETH і SOL читаються через гамма-режим, опціонні рівні та найближчі експірації, щоб було видно, де ціна може стабілізуватися, де можливе прискорення і які зони справді формують сесію.</p>
+          <p class="release-note">Прогнози виходять щодня після 08:00 GMT.</p>
+          <div class="actions">
+            <a class="button primary" href="#plans">Отримати доступ</a>
+            <a class="button secondary" href="#sample">Подивитися приклад</a>
+          </div>
+        </div>
+        <aside class="brief-preview" aria-label="Приклад структури GEX">
+          <div class="hero-dashboard-panel">
+            <img src="images/hero-market-panels.png" alt="Панелі ринкового дашборду для BTC, ETH і SOL">
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="what" class="section white">
+      <div class="what-combined">
+        <div>
+          <p class="eyebrow">Що це</p>
+          <h2>Ринкова карта дня без шуму</h2>
+          <div class="text-stack compact">
+            <p>Alpha Four Desk - це щоденна аналітика крипторинку для трейдерів, яким потрібен спокійний, структурований погляд на <span class="crypto-btc">BTC</span>, <span class="crypto-eth">ETH</span> і <span class="crypto-sol">SOL</span>. Прогнози виходять щодня після 08:00 GMT. Замість потоку думок ви отримуєте робочий план на день: важливі зони, найімовірніший сценарій і умови, за яких ідея втрачає силу.</p>
+            <p>Результат — не розмитий прогноз, а карта для рішень: де ринок може втриматися, де можливий імпульс, де розташований ризик і що має статися, щоб переглянути план.</p>
+          </div>
+        </div>
+        <div class="audience-compact">
+          <div class="photo-panel compact-photo gex-photo"><img src="images/hero-gex-dashboard.png" alt="Дашборд GEX зі структурою опціонів SOL, рівнями та гамма-зонами"></div>
+          <p class="eyebrow">Для кого</p>
+          <div class="lines compact-lines">
+            <p>Для внутрішньоденних трейдерів, яким потрібна чітка карта дня без зайвого шуму.</p>
+            <p>Для позиційних трейдерів, які хочуть бачити сценарії, а не реагувати на кожну свічку.</p>
+            <p>Для приватних інвесторів і команд, яким важливі рівні, контекст і точки скасування ідеї.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subscription" class="section subscription-section">
+      <div class="section-heading">
+        <p class="eyebrow">Що всередині</p>
+        <h2>Що отримує підписник</h2>
+        <p>Не просто огляд ринку, а практична карта дня: ключові рівні, базовий сценарій, ризик і точка, де ідея більше не працює.</p>
+      </div>
+      <div class="card-grid six subscription-grid">
+        <article><i></i><h3>Щоденний аналіз BTC, ETH і SOL</h3><p>Компактний, але повний погляд на три ключові інструменти без розрізнених думок.</p></article>
+        <article><i></i><h3>Рівні, які важливі сьогодні</h3><p>Зони тяжіння, відскоку та скасування, які мають значення для поточної сесії.</p></article>
+        <article><i></i><h3>Основний сценарій і запасний план</h3><p>Карта можливих результатів: базовий сценарій, альтернативний сценарій і умови переходу.</p></article>
+        <article><i></i><h3>Ризик і скасування ідеї</h3><p>Ви бачите, де сценарій ще чинний, а де його вже не варто захищати.</p></article>
+        <article><i></i><h3>Ринкова логіка без перевантаження</h3><p>Ми показуємо не лише рівні, а й чому саме ці зони важливі сьогодні.</p></article>
+        <article><i></i><h3>Прогноз проти факту</h3><p>Наприкінці дня план порівнюється з тим, що ринок фактично зробив.</p></article>
+      </div>
+    </section>
+
+    <section id="difference" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Відмінність</p>
+        <h2>Аналітика замість шуму</h2>
+        <p>Ми не публікуємо сліпі команди й не намагаємося вгадати ринок однією фразою. Спочатку йдуть контекст, потім рівні, сценарій, ризик і чітка точка скасування.</p>
+      </div>
+      <div class="card-grid three">
+        <article><h3>Не хаотичні сигнали</h3><p>Кожен висновок прив'язаний до контексту, рівня та скасування. Це аналітична база для вашого власного рішення.</p></article>
+        <article><h3>Не важка теорія</h3><p>У звіті залишається лише те, що допомагає сьогодні: контекст, рівні, сценарій і ризик.</p></article>
+        <article><h3>Не вгадування</h3><p>Спочатку ми визначаємо можливі шляхи, а потім умови, які їх підтверджують або скасовують.</p></article>
+      </div>
+    </section>
+
+    <section id="methodology" class="section white">
+      <div class="section-heading">
+        <p class="eyebrow">Метод</p>
+        <h2>Як ми читаємо ринок</h2>
+        <p>Alpha Four Desk побудований навколо простої дисципліни: зрозуміти контекст, визначити важливі рівні, описати сценарій і позначити, де ідея перестає працювати.</p>
+      </div>
+      <div class="methodology-grid">
+        <article><i></i><h3>Спочатку контекст</h3><p>Ми дивимося на стан ринку, тиск позиціонування та зони, що важливі для поточної сесії.</p></article>
+        <article><i></i><h3>Без вгадування</h3><p>Робота будується на сценарії, підтвердженні, скасуванні та контролі ризику.</p></article>
+        <article><i></i><h3>Умови підтвердження</h3><p>Сценарій набирає ваги лише після реакції ціни на ключові зони.</p></article>
+        <article><i></i><h3>Прогноз проти факту</h3><p>Щоденна карта звіряється з реальною поведінкою ринку, а не з відчуттями.</p></article>
+      </div>
+    </section>
+
+    <section id="sample" class="section white">
+      <div class="section-heading">
+        <p class="eyebrow">Приклад карти</p>
+        <h2>Щоденний огляд у робочому форматі</h2>
+        <p>Демо-дані показують структуру звіту. Реальні значення оновлюються в щоденному аналізі.</p>
+      </div>
+      <div class="market-grid">
+        <article class="market-card">
+          <div class="market-head"><div class="coin-title"><img class="coin-logo" src="images/bitcoin-btc-logo.svg" alt="BTC"><span class="asset-btc">BTC</span></div><div><span>Ціна</span><strong>$67,240</strong></div></div>
+          <div class="metric-grid"><div><dt>A1</dt><dd>$66,900</dd></div><div><dt>Flip</dt><dd>$66,700</dd></div><div><dt>Режим</dt><dd class="signal">Позитивний</dd></div><div><dt>Ймовірність</dt><dd class="signal">62%</dd></div></div>
+          <dl><dt>Базовий сценарій</dt><dd>Утримання вище A1 і рух до верхньої зони ліквідності.</dd><dt>Вхід</dt><dd>$66,950-67,150</dd></dl>
+          <div class="risk-box"><div><dt>Стоп</dt><dd class="risk">$66,700</dd></div><div><dt>Скасування</dt><dd class="risk">Закріплення нижче $66,600</dd></div></div>
+          <dl><dt>Цілі</dt><dd>$68,800 / $70,000</dd><dt>Ризик</dt><dd class="signal">Помірний</dd><dt>Зона</dt><dd>$66,900-67,200</dd></dl>
+        </article>
+        <article class="market-card">
+          <div class="market-head"><div class="coin-title"><img class="coin-logo" src="images/ethereum-eth-logo.svg" alt="ETH"><span class="asset-eth">ETH</span></div><div><span>Ціна</span><strong>$2,045</strong></div></div>
+          <div class="metric-grid"><div><dt>A1</dt><dd>$2,080</dd></div><div><dt>Flip</dt><dd>$2,050</dd></div><div><dt>Режим</dt><dd class="signal">Позитивний</dd></div><div><dt>Ймовірність</dt><dd class="signal">58%</dd></div></div>
+          <dl><dt>Базовий сценарій</dt><dd>Повернення до середнього всередині діапазону біля Flip.</dd><dt>Вхід</dt><dd>$2,035-2,055</dd></dl>
+          <div class="risk-box"><div><dt>Стоп</dt><dd class="risk">$2,010</dd></div><div><dt>Скасування</dt><dd class="risk">Закріплення нижче $2,000</dd></div></div>
+          <dl><dt>Цілі</dt><dd>$2,085 / $2,120</dd><dt>Ризик</dt><dd class="signal">Підвищений</dd><dt>Зона</dt><dd>$2,035-2,080</dd></dl>
+        </article>
+        <article class="market-card">
+          <div class="market-head"><div class="coin-title"><img class="coin-logo" src="images/solana-sol-logo.png" alt="SOL"><span class="asset-sol">SOL</span></div><div><span>Ціна</span><strong>$81.4</strong></div></div>
+          <div class="metric-grid"><div><dt>A1</dt><dd>$82.0</dd></div><div><dt>Flip</dt><dd>$79.0</dd></div><div><dt>Режим</dt><dd class="signal">Позитивний / висока бета</dd></div><div><dt>Ймовірність</dt><dd class="signal">55%</dd></div></div>
+          <dl><dt>Базовий сценарій</dt><dd>Напрямний ухил зберігається, але хибні пробої дуже ймовірні.</dd><dt>Вхід</dt><dd>$80.8-81.6</dd></dl>
+          <div class="risk-box"><div><dt>Стоп</dt><dd class="risk">$79.4</dd></div><div><dt>Скасування</dt><dd class="risk">Закріплення нижче $78.0</dd></div></div>
+          <dl><dt>Цілі</dt><dd>$84.0 / $86.5</dd><dt>Ризик</dt><dd class="signal">Високий</dd><dt>Зона</dt><dd>$80.5-82.0</dd></dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="premium-sample" class="section premium-section">
+      <div class="section-heading">
+        <p class="eyebrow premium-eyebrow">Premium-підписка</p>
+        <h2>Що отримує підписник Premium</h2>
+        <p>Розширений аналітичний розбір по кожному інструменту: сценарій, рівні, ризик, точки скасування ідеї та контекст за найближчими експіраціями.</p>
+      </div>
+      <div class="premium-grid">
+        <article class="premium-card eth-premium">
+          <div class="premium-head">
+            <div class="premium-instrument">
+              <span><img src="images/ethereum-eth-logo.svg" alt="ETH"></span>
+              <div><h3>ETH · 16APR26</h3><p><span class="crypto-eth">ETH</span> ф'ючерси/спот + опціони · 16APR26 (24h DTE, усі строки)</p></div>
+            </div>
+            <b>COMBO GEX</b>
+          </div>
+          <div class="premium-block"><h4>COMBO GEX - Основні параметри</h4><div class="premium-metrics"><p><span>Ціна</span><b>2,316</b></p><p><span>A1</span><b>2,350 (0DTE) / 2,300 загальний</b></p><p><span>Flip</span><b>2,317 (0DTE) / 2,014 загальний</b></p><p><span>Режим</span><b>позитивна гамма</b></p></div></div>
+          <div class="premium-block premium-priority"><h4>Основний сценарій</h4><em>Ймовірність: ~60-62%</em><p>Базовий сценарій - реакумуляція над 2,300 і робота в верхній внутрішньоденний кластер 2,325-2,350. <span class="crypto-eth">ETH</span> не виглядає слабким: загальний режим позитивний, загальний A1 уже під ціною, а локальний денний магніт розташований вище. Це дає контрольований ухил угору, але не означає безперервний тренд без пауз.</p></div>
+          <div class="premium-block premium-priority"><h4>Торгові рівні</h4><div class="premium-rows"><p><span>Вхід</span><b>Лонг: 2,308-2,318</b></p><p><span>Стоп</span><b>2,294</b></p><p><span>Скасування ідеї</span><b>Годинне закріплення нижче 2,290</b></p><p><span>Цілі</span><b>TP1: 2,325 · TP2: 2,350 · TP3: 2,400</b></p><p><span>Ризик</span><b>Помірний. Співвідношення ризик/прибуток близько 1:1.5-1:2</b></p></div></div>
+          <div class="premium-block"><h4>Зона піннінгу / альтернативний сценарій</h4><strong>2,300-2,350 - локальна внутрішньоденна зона балансу.</strong><div class="premium-two"><div><span>Ключова область спостереження</span><p>2,300 - загальний A1 і нижня опора дня</p><p>2,317 - 0DTE Flip</p><p>2,350 - верхня зона сценарію</p></div><div><span>Два підтверджувальні сигнали</span><p><b>1.</b> При тесті 2,300-2,310: зростання пасивного біда і відсутність стійкого розвитку вниз після маркет-продажу.</p><p><b>2.</b> При підході до 2,317-2,325: якщо продавець не може швидко повернути ціну під Flip, шанс на рух до 2,350 помітно зростає.</p></div></div></div>
+          <div class="premium-block premium-priority"><h4>Логіка</h4><div class="premium-logic"><p>У режимі позитивної гамми дилери згладжують коливання і тримають ринок біля сильних опціонних вузлів.</p><p>P/C Ratio: 0.34 - бичачий ухил, але помірний.</p><p>TOTAL: 2,300 / 2,400 / 2,500</p><p>0DTE: 2,317 / 2,350</p><p>Структура строків: сусідні експірації підтримують роботу вище, але передбачають контрольоване зміщення, а не безперервне прискорення.</p></div></div>
+          <div class="premium-block mindset"><h4>Підхід без вгадування</h4><p>Не шортити ринок лише тому, що він уже виріс. Поки ціна тримається над 2,300, базова логіка - діапазон і повернення вгору до 2,350.</p></div>
+        </article>
+        <article class="premium-card sol-premium">
+          <div class="premium-head">
+            <div class="premium-instrument">
+              <span><img src="images/solana-sol-logo.png" alt="SOL"></span>
+              <div><h3>SOL · 16APR26</h3><p><span class="crypto-sol">SOL</span> ф'ючерси/спот + опціони · 16APR26 (24h DTE, усі строки)</p></div>
+            </div>
+            <b>COMBO GEX</b>
+          </div>
+          <div class="premium-block"><h4>COMBO GEX - Основні параметри</h4><div class="premium-metrics"><p><span>Ціна</span><b>82.9</b></p><p><span>A1</span><b>82.0 (0DTE) / 80.0 загальний</b></p><p><span>Flip</span><b>82.7 (0DTE) / 85.1 загальний</b></p><p><span>Режим</span><b>негативна гамма</b></p></div></div>
+          <div class="premium-block premium-priority"><h4>Основний сценарій</h4><em>Ймовірність: ~55-57%</em><p>Базовий сценарій - невдале повернення і боротьба в зоні 82.7-84.0 з ризиком повторного тиску вниз до 82 / 80. Сам по собі локальний відскок вище 82.7 ще не переводить актив у стійкий позитивний режим, поки загальний Flip 85.1 лишається вище ринку.</p></div>
+          <div class="premium-block premium-priority"><h4>Торгові рівні</h4><div class="premium-rows"><p><span>Вхід</span><b>Агресивний шорт: 83.1-83.8</b></p><p><span>Стоп</span><b>84.4</b></p><p><span>Скасування ідеї</span><b>Годинне закріплення вище 85.1</b></p><p><span>Цілі</span><b>TP1: 82.0 · TP2: 80.0 · TP3: 79.0</b></p><p><span>Ризик</span><b>Підвищений. Негативна гамма підсилює імпульси, тому розмір позиції має бути меншим, а стоп - жорсткішим.</b></p></div></div>
+          <div class="premium-block"><h4>Зона піннінгу / альтернативний сценарій</h4><strong>82.7-84.0 - зона короткострокової боротьби між локальним відскоком і загальним ведмежим режимом.</strong><div class="premium-two"><div><span>Ключова область спостереження</span><p>82.0 - локальна денна опора</p><p>82.7 - 0DTE Flip</p><p>84.0 - найближчий верхній внутрішньоденний вузол</p><p>85.1 - головний тригер режиму</p></div><div><span>Два підтверджувальні сигнали</span><p><b>1.</b> Для шорт-ідеї: зростання агресивних покупок у зоні 83-84 без стійкого ап-тренду і швидке повернення під 82.7.</p><p><b>2.</b> Для скасування шорт-ідеї: прийняття вище 84.0 з утриманням, меншими відкатами і серією послідовних бид-підхватів до 85+.</p></div></div></div>
+          <div class="premium-block premium-priority"><h4>Логіка</h4><div class="premium-logic"><p>У режимі негативної гамми дилери частіше хеджуються за рухом і підсилюють імпульс, що вже почався.</p><p>P/C Ratio: -0.29 - ведмежий ухил.</p><p>TOTAL: загальний тригер режиму = 85.1</p><p>0DTE: 82 / 82.7 / 84</p><p>Структура строків: ближня крива допускає відскок, але не дає такої ж сильної верхньої підтримки, як у <span class="crypto-btc">BTC</span>/<span class="crypto-eth">ETH</span>.</p></div></div>
+          <div class="premium-block mindset"><h4>Підхід без вгадування</h4><p><span class="crypto-sol">SOL</span> не читається за тими ж правилами, що <span class="crypto-btc">BTC</span> і <span class="crypto-eth">ETH</span>. Поки ринок нижче 85.1, базова логіка - тактичний напрямний ухил.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="forecast-vs-fact" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Прогноз проти факту</p>
+        <h2>ПРОГНОЗ VS ФАКТ · COMBO GEX</h2>
+        <p>Щовечора звіряємо ранковий сценарій з тим, що ринок зробив насправді. Без ретуші: часткове влучення — це часткове влучення.</p>
+      </div>
+      <div class="pvf-date">21 квітня 2026 · COMBO GEX</div>
+      <div class="pvf-grid">
+        <article class="pvf-card">
+          <div class="pvf-head">
+            <div class="coin-title"><img class="coin-logo" src="images/bitcoin-btc-logo.svg" alt="BTC"><span class="asset-btc">BTC</span></div>
+            <span class="pvf-badge pvf-badge--partial">⚠️ Часткове / в плюс</span>
+          </div>
+          <div class="pvf-row">
+            <div class="pvf-col-inner"><span class="pvf-label">Прогноз</span><p>Утримання 74 500–75 000 і повернення до 75 554</p></div>
+            <div class="pvf-col-inner"><span class="pvf-label">Факт</span><ul class="pvf-facts"><li>База утримана</li><li>Повернення до 75 554 було</li><li>Впевненого прийняття вище не відбулось</li></ul></div>
+          </div>
+        </article>
+        <article class="pvf-card">
+          <div class="pvf-head">
+            <div class="coin-title"><img class="coin-logo" src="images/ethereum-eth-logo.svg" alt="ETH"><span class="asset-eth">ETH</span></div>
+            <span class="pvf-badge pvf-badge--partial">⚠️ Часткове / слабо в плюс</span>
+          </div>
+          <div class="pvf-row">
+            <div class="pvf-col-inner"><span class="pvf-label">Прогноз</span><p>Утримання 2 275–2 300 і повернення до 2 345</p></div>
+            <div class="pvf-col-inner"><span class="pvf-label">Факт</span><ul class="pvf-facts"><li>База утримана</li><li>Інвалідація не пробита</li><li>До 2 345 ринок не дотягнув</li></ul></div>
+          </div>
+        </article>
+        <article class="pvf-card">
+          <div class="pvf-head">
+            <div class="coin-title"><img class="coin-logo" src="images/solana-sol-logo.png" alt="SOL"><span class="asset-sol">SOL</span></div>
+            <span class="pvf-badge pvf-badge--hit">✅ Гарне влучення</span>
+          </div>
+          <div class="pvf-row">
+            <div class="pvf-col-inner"><span class="pvf-label">Прогноз</span><p>Локальне повернення до 85,0–86,0</p></div>
+            <div class="pvf-col-inner"><span class="pvf-label">Факт</span><ul class="pvf-facts"><li>Ринок утримався вище 83,4</li><li>Повернувся в 85,0–86,0</li><li>Інвалідація не пробита</li></ul></div>
+          </div>
+        </article>
+      </div>
+      <div class="pvf-summary">
+        <span class="pvf-summary-assets"><span>BTC ⚠️</span><span>ETH ⚠️</span><span>SOL ✅</span></span>
+        <p>Найкращий розбір дня — по SOL. Робоча ідея по BTC. Слабша реалізація по ETH.</p>
+      </div>
+      <p class="pvf-note">Вечірній розбір прогнозу проти факту входить до <a href="#plans">Premium-підписки</a>.</p>
+    </section>
+
+    <section id="glossary" class="section white">
+
+      <div class="section-heading">
+        <p class="eyebrow">Глосарій</p>
+        <h2>Мова ринку без зайвої складності</h2>
+        <p>Короткі визначення термінів, які використовуються в щоденних звітах.</p>
+      </div>
+      <div class="glossary-preview-grid">
+        <article><h3>GEX</h3><small>Гамма-експозиція</small><p>Гамма-експозиція опціонів: зона, де дилерський хедж може приглушувати або підсилювати рух ціни.</p></article>
+        <article><h3>Flip</h3><small>Гамма-перемикання</small><p>Рівень, на якому змінюється гамма-режим.</p></article>
+        <article><h3>A1</h3><small>Найближчий магніт / опорний рівень</small><p>Найближчий ціновий магніт і ключова точка для денного сценарію.</p></article>
+        <article><h3>Позитивна гамма</h3><p>Режим, у якому хедж часто згладжує рух і підтримує діапазонну поведінку.</p></article>
+        <article><h3>Негативна гамма</h3><p>Режим, у якому хедж може підсилювати рух і підтримувати напрямний імпульс.</p></article>
+        <article><h3>Скасування</h3><p>Рівень, на якому сценарій більше не є чинним.</p></article>
+      </div>
+    </section>
+
+    <section id="plans" class="section plans-section">
+      <div class="section-heading">
+        <p class="eyebrow">Ціни</p>
+        <h2>Оберіть глибину щоденної аналітики</h2>
+        <p>Basic - сильна точка входу в щоденну ринкову картину. Premium - основний формат для глибшої логіки, ризику, альтернативного сценарію та розбору "прогноз проти факту". Прогнози виходять щодня після 08:00 GMT.</p>
+      </div>
+      <div class="plan-cards">
+        <article>
+          <p class="eyebrow">Basic</p>
+          <h3>30 USDT / місяць</h3>
+          <p>Короткий щоденний звіт для самостійної роботи: ключові рівні, базовий сценарій і точка скасування.</p>
+          <ul class="plan-features">
+            <li>Щоденний короткий огляд ринку після 08:00 GMT</li>
+            <li>Ключові рівні BTC, ETH і SOL</li>
+            <li>Базовий сценарій дня</li>
+            <li>Точка скасування</li>
+            <li>Короткий ринковий контекст</li>
+          </ul>
+          <a class="button primary" href="https://t.me/A4DeskAccessBot?start=basic" target="_blank" rel="noopener">Запросити в Telegram</a>
+        </article>
+        <article class="featured">
+          <p class="eyebrow">Premium</p>
+          <h3>90 USDT / місяць</h3>
+          <p>Основний продукт Alpha Four Desk: глибша робота зі сценарієм для кожного інструмента, з логікою, ризиком і умовами перегляду плану.</p>
+          <ul class="plan-features">
+            <li>Усе з Basic</li>
+            <li>Щоденний Premium-звіт після 08:00 GMT</li>
+            <li>Розширений аналіз сценарію</li>
+            <li>Альтернативний сценарій</li>
+            <li>Детальна логіка руху ціни</li>
+            <li>Ризик / скасування / цілі</li>
+            <li>Контекст найближчої експірації</li>
+            <li>Прогноз проти факту</li>
+          </ul>
+          <a class="button light" href="https://t.me/A4DeskAccessBot?start=premium" target="_blank" rel="noopener">Запросити в Telegram</a>
+        </article>
+      </div>
+      <p class="plan-contact-note">Заявка оформлюється через Telegram-бота <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noopener">@A4DeskAccessBot</a>: оберіть тариф, і бот відкриє заявку. Для ручного зв’язку можна написати <a href="https://t.me/A4Desk" target="_blank" rel="noopener">@A4Desk</a>. Прогнози виходять щодня після 08:00 GMT.</p>
+    </section>
+
+    <section id="faq" class="section white">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Короткі відповіді</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Це торгові сигнали?</summary><p>Ні. Це сценарна аналітика: рівні, ймовірності, контекст, ризик і скасування. Остаточне рішення завжди ухвалює користувач.</p></details>
+        <details><summary>Для кого це?</summary><p>Для внутрішньоденних і позиційних трейдерів, яким потрібна спокійна щоденна карта для BTC, ETH і SOL.</p></details>
+        <details><summary>Як запросити доступ?</summary><p>Оберіть Basic або Premium і натисніть «Запросити в Telegram». Відкриється бот <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noopener">@A4DeskAccessBot</a>, який прийме заявку.</p></details>
+        <details><summary>Як часто виходять звіти?</summary><p>Прогноз і ринкова карта публікуються щодня після 08:00 GMT.</p></details>
+        <details><summary>Це інвестиційна порада?</summary><p>Ні. Матеріал має аналітичний та інформаційний характер і не є індивідуальною інвестиційною рекомендацією.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <div class="footer-brand"><span class="brand-mark inverse"><i></i><i></i><i></i><i></i></span><strong>Alpha Four Desk<small>Щоденна ринкова карта</small></strong></div>
+      <p>Щоденна ринкова карта BTC, ETH і SOL: контекст, рівні, сценарії та ризик. Прогнози виходять щодня після 08:00 GMT. Доступ запитується через <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noopener">@A4DeskAccessBot</a>. Ручний контакт: <a href="https://t.me/A4Desk" target="_blank" rel="noopener">@A4Desk</a>.</p>
+    </div>
+    <div class="footer-risk">
+      <strong>Попередження про ризики</strong>
+      <p>Матеріали Alpha Four Desk мають аналітичний та інформаційний характер. Це не торгові сигнали й не індивідуальна інвестиційна рекомендація. Розмір позиції, рішення та ризик завжди залишаються відповідальністю користувача.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

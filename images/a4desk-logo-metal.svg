@@ -1,0 +1,49 @@
+<svg width="112" height="88" viewBox="0 0 112 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="18" y1="12" x2="92" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5EB"/>
+      <stop offset="0.34" stop-color="#D6D2C7"/>
+      <stop offset="0.68" stop-color="#8D8E87"/>
+      <stop offset="1" stop-color="#EEE9DC"/>
+    </linearGradient>
+    <linearGradient id="inner-metal" x1="20" y1="20" x2="91" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF4"/>
+      <stop offset="0.52" stop-color="#C7C5BC"/>
+      <stop offset="1" stop-color="#5E625D"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="55" y1="22" x2="55" y2="66" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2FAE8F"/>
+      <stop offset="0.58" stop-color="#127B6C"/>
+      <stop offset="1" stop-color="#06483F"/>
+    </linearGradient>
+    <filter id="logo-shadow" x="0" y="4" width="112" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.2" result="blur"/>
+      <feOffset in="blur" dx="0" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#101715" flood-opacity="0.22" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+      </feMerge>
+    </filter>
+    <filter id="bar-shadow" x="18" y="18" width="74" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.4" flood-color="#062F2A" flood-opacity="0.48"/>
+    </filter>
+  </defs>
+
+  <rect x="8" y="10" width="96" height="68" rx="14" fill="#101715" filter="url(#logo-shadow)"/>
+  <rect x="8" y="10" width="96" height="68" rx="14" fill="url(#metal)"/>
+  <rect x="8" y="10" width="96" height="68" rx="14" stroke="#DCD8CE" stroke-width="3"/>
+  <g>
+    <rect x="14" y="16" width="84" height="56" rx="10" fill="url(#inner-metal)" opacity="0.7"/>
+    <rect x="14" y="16" width="84" height="56" rx="10" stroke="#13231F" stroke-opacity="0.6" stroke-width="2"/>
+    <path d="M20 22H92" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#bar-shadow)">
+    <rect x="26" y="42" width="10" height="21" rx="2.5" fill="url(#bar)"/>
+    <rect x="43" y="34" width="10" height="29" rx="2.5" fill="url(#bar)"/>
+    <rect x="60" y="25" width="10" height="38" rx="2.5" fill="url(#bar)"/>
+    <rect x="77" y="38" width="10" height="25" rx="2.5" fill="url(#bar)"/>
+    <path d="M28 43.5H34M45 35.5H51M62 26.5H68M79 39.5H85" stroke="#BFE4DE" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+  </g>
+</svg>

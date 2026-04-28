@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://a4desk.netlify.app/sitemap.xml
+Sitemap: https://a4desk.github.io/sitemap.xml

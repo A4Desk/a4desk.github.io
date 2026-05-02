@@ -469,6 +469,20 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+.brand-word {
+  color: var(--heading);
+  font-weight: 900;
+}
+
+.brand-word .brand-four {
+  color: var(--premium-gold);
+}
+
+.basic-word {
+  color: #8FB8C8;
+  font-weight: 900;
+}
+
 .hero-copy h1 {
   max-width: 760px;
   font-size: 40px;
@@ -1499,6 +1513,288 @@ h3 {
 .plan-cards .button {
   margin-top: auto;
   align-self: flex-start;
+}
+
+.sample-demo-links,
+.plan-demo-row,
+.demo-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.sample-demo-links {
+  width: min(720px, calc(100% - 40px));
+  margin: 18px auto 28px;
+}
+
+.plan-demo-row {
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+
+.plan-demo-link {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.featured .plan-demo-link {
+  color: var(--premium-gold);
+}
+
+.plan-demo-link:hover {
+  text-decoration: underline;
+}
+
+.demo-page {
+  background: var(--section-bg);
+}
+
+.demo-hero {
+  padding-top: 78px;
+  padding-bottom: 36px;
+}
+
+.demo-hero h1 {
+  margin: 0;
+  color: #D9DEE2;
+  font-size: clamp(30px, 3.7vw, 48px);
+  line-height: 1.12;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.premium-word {
+  color: var(--premium-gold);
+  font-weight: 900;
+}
+
+.button.primary .premium-word,
+.button.primary .basic-word,
+.header-cta .premium-word,
+.header-cta .basic-word {
+  color: inherit;
+}
+
+.button .basic-word,
+.button .premium-word,
+.plan-demo-link .basic-word,
+.plan-demo-link .premium-word {
+  margin-right: 0.18em;
+}
+
+.demo-section {
+  padding-top: 42px;
+}
+
+.demo-doc-head {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.demo-doc-head h2 {
+  margin: 8px 0 10px;
+  color: var(--heading);
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+}
+
+.demo-doc-head p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+}
+
+.demo-card-grid,
+.demo-premium-stack {
+  width: min(1280px, calc(100% - 40px));
+  display: grid;
+  gap: 22px;
+  margin: 0 auto;
+}
+
+.demo-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.demo-premium-stack {
+  grid-template-columns: 1fr;
+}
+
+.demo-report-card {
+  padding: 26px;
+  background: linear-gradient(180deg, rgba(28, 34, 40, 0.98), rgba(18, 23, 28, 0.98));
+  border: 2px solid var(--frame-color);
+  border-radius: var(--floating-card-radius);
+  box-shadow: var(--floating-card-shadow);
+}
+
+.demo-report-card h3 {
+  margin: 0 0 18px;
+  color: var(--heading);
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.demo-report-card h4 {
+  margin: 22px 0 10px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.demo-report-card p {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.demo-report-card b,
+.demo-report-card strong {
+  color: var(--heading);
+}
+
+.demo-line,
+.demo-accent,
+.demo-two > div {
+  padding: 14px 16px;
+  background: rgba(8, 11, 14, 0.38);
+  border: 1px solid var(--frame-color);
+  border-radius: var(--floating-card-radius);
+}
+
+.demo-line {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.demo-line strong,
+.demo-line span {
+  color: var(--heading);
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.demo-accent {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  border-color: rgba(255, 159, 26, 0.55);
+}
+
+.demo-accent b {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.demo-accent strong {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.demo-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.demo-two h4 {
+  margin-top: 0;
+}
+
+.demo-two p {
+  margin-top: 0;
+}
+
+.demo-premium-card {
+  padding: 32px;
+}
+
+.demo-summary-card {
+  width: min(1280px, calc(100% - 40px));
+  margin: 22px auto 0;
+}
+
+.demo-premium-stack .demo-summary-card {
+  width: 100%;
+  margin-top: 0;
+}
+
+.demo-final-cta {
+  width: min(880px, calc(100% - 40px));
+  margin: 34px auto 0;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(28, 34, 40, 0.98), rgba(18, 23, 28, 0.98));
+  border: 2px solid var(--frame-color);
+  border-radius: var(--floating-card-radius);
+  box-shadow: var(--floating-card-shadow);
+}
+
+.demo-final-cta p {
+  margin: 0 0 18px;
+  color: var(--heading);
+  font-weight: 800;
+}
+
+.premium-funnel {
+  width: min(1180px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 auto 28px;
+}
+
+.premium-funnel article {
+  min-height: 190px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(28, 34, 40, 0.98), rgba(18, 23, 28, 0.98));
+  border: 2px solid var(--frame-color);
+  border-radius: var(--floating-card-radius);
+  box-shadow: var(--floating-card-shadow);
+}
+
+.premium-funnel article::before {
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin-bottom: 18px;
+  background: var(--premium-gold);
+  content: "";
+}
+
+.premium-funnel h3 {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.premium-funnel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.premium-funnel-cta {
+  width: min(820px, calc(100% - 40px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.premium-funnel-cta p {
+  margin: 0 0 18px;
+  color: var(--muted);
 }
 
 .plan-contact-note {
@@ -2948,7 +3244,10 @@ dt {
   .glossary-term-grid,
   .methodology-grid,
   .premium-grid,
+  .premium-funnel,
   .plan-cards,
+  .demo-card-grid,
+  .demo-two,
   .comparison-table > div {
     grid-template-columns: 1fr;
   }
@@ -3036,8 +3335,16 @@ dt {
   .glossary-hero > div,
   .methodology-grid,
   .premium-grid,
+  .premium-funnel,
+  .premium-funnel-cta,
   .plan-cards,
   .sample-helper,
+  .sample-demo-links,
+  .demo-card-grid,
+  .demo-premium-stack,
+  .demo-doc-head,
+  .demo-summary-card,
+  .demo-final-cta,
   .faq-list {
     width: calc(100% - 32px);
   }

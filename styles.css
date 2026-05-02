@@ -1582,8 +1582,9 @@ h3 {
 .button .premium-word,
 .plan-demo-link .basic-word,
 .plan-demo-link .premium-word {
-  margin-right: 0.18em;
+  margin-inline: 0.16em;
 }
+
 
 .demo-section {
   padding-top: 42px;

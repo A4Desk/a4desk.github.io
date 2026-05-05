@@ -495,8 +495,14 @@ h1 {
 }
 
 .data-source {
-  color: var(--accent-deep);
+  display: inline-block;
+  padding: 1px 6px;
+  color: var(--accent);
+  background: rgba(255, 159, 26, 0.12);
+  border: 1px solid rgba(255, 159, 26, 0.32);
+  border-radius: 6px;
   font-weight: 800;
+  line-height: 1.35;
 }
 
 .hero-copy h1 {

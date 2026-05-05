@@ -503,6 +503,7 @@ h1 {
   border-radius: 6px;
   font-weight: 800;
   line-height: 1.35;
+  text-decoration: none;
 }
 
 .hero-copy h1 {

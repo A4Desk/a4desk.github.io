@@ -494,6 +494,11 @@ h1 {
   font-weight: 900;
 }
 
+.data-source {
+  color: var(--accent-deep);
+  font-weight: 800;
+}
+
 .hero-copy h1 {
   max-width: 760px;
   font-size: 40px;

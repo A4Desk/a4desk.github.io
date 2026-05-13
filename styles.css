@@ -2361,6 +2361,223 @@ h3 {
   line-height: 1.65;
 }
 
+.guide-hero {
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255, 159, 26, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(8, 11, 14, 0.96), rgba(18, 23, 28, 0.92));
+}
+
+.guide-hero h1 {
+  color: var(--text);
+}
+
+.guide-formula {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1120px;
+  margin-top: 28px;
+}
+
+.guide-formula span {
+  position: relative;
+  padding: 10px 14px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--frame-color-strong);
+  border-radius: var(--floating-card-radius);
+  box-shadow: var(--floating-card-shadow);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.guide-formula span:not(:last-child)::after {
+  content: "→";
+  margin-left: 10px;
+  color: var(--accent);
+}
+
+.guide-page {
+  gap: 28px;
+}
+
+.guide-section {
+  padding: 30px;
+  background: linear-gradient(145deg, rgba(23, 29, 34, 0.98), rgba(14, 18, 22, 0.98));
+  border: 1px solid var(--frame-color-strong);
+  border-radius: var(--floating-card-radius);
+  box-shadow: var(--floating-card-shadow);
+}
+
+.guide-section h2 {
+  max-width: 980px;
+  margin: 0;
+  color: var(--text);
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+.guide-section > p,
+.guide-section li {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.guide-section > p {
+  margin: 18px 0 0;
+}
+
+.guide-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.guide-lead p,
+.guide-note p,
+.guide-two p,
+.guide-card-row p,
+.guide-model-grid p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.guide-note {
+  padding: 22px;
+  background: rgba(255, 159, 26, 0.08);
+  border: 1px solid rgba(255, 159, 26, 0.32);
+  border-radius: var(--floating-card-radius);
+}
+
+.guide-note strong {
+  display: block;
+  color: var(--accent);
+  font-family: Sora, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.guide-note p {
+  margin: 10px 0 0;
+}
+
+.guide-two,
+.guide-card-row,
+.guide-model-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.guide-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.guide-card-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.guide-card-row.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.guide-two article,
+.guide-card-row article,
+.guide-model-grid article {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--frame-color);
+  border-radius: var(--floating-card-radius);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045), 0 12px 26px rgba(0, 0, 0, 0.2);
+}
+
+.guide-page article h3,
+.guide-two h3,
+.guide-card-row h3,
+.guide-model-grid h3,
+.glossary-preview-grid h3 {
+  margin: 0;
+  color: var(--accent);
+}
+
+.guide-two h3,
+.guide-card-row h3,
+.guide-model-grid h3 {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.guide-two p,
+.guide-card-row p,
+.guide-model-grid p {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+
+.guide-two ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+}
+
+.guide-term-grid {
+  margin-top: 20px;
+}
+
+.guide-term-grid article {
+  background: var(--surface);
+  border-color: var(--frame-color);
+}
+
+.guide-term-grid h3 {
+  color: var(--accent);
+}
+
+.guide-model-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.guide-model-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 14px;
+  color: #07090b;
+  background: var(--accent);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  margin: 22px 0 0;
+  padding-left: 24px;
+}
+
+.guide-steps li {
+  padding-left: 4px;
+}
+
+.guide-final {
+  text-align: center;
+}
+
+.guide-final h2,
+.guide-final p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.guide-final .button {
+  margin-top: 22px;
+}
+
 .six {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -3279,6 +3496,38 @@ dt {
   box-shadow: none !important;
 }
 
+/* A4Desk title accent system */
+.subscription-grid h3,
+.methodology-grid h3,
+.card-grid h3,
+.market-card h3,
+.glossary-preview-grid h3,
+.glossary-term-grid h3,
+.plan-cards h3,
+.demo-report-card h3,
+.premium-funnel h3,
+.premium-instrument h3,
+.premium-head > b,
+.premium-block h4,
+.premium-priority h4,
+.premium-block > em,
+.guide-page article h3,
+.faq-list summary,
+.pvf-card h3,
+.pvf-label,
+.comparison-head span,
+.comparison-table > div > span:first-child,
+.market-card dt,
+.metric-grid dt,
+.risk-box dt,
+.logic-box dt,
+.premium-metrics span,
+.premium-rows span,
+.premium-two span,
+.footer-risk strong {
+  color: var(--accent) !important;
+}
+
 .premium-card {
   padding-right: 28px !important;
   padding-left: 28px !important;
@@ -3350,6 +3599,12 @@ dt {
   .plan-cards,
   .demo-card-grid,
   .demo-two,
+  .guide-intro,
+  .guide-two,
+  .guide-card-row,
+  .guide-card-row.four,
+  .guide-model-grid,
+  .guide-steps,
   .comparison-table > div {
     grid-template-columns: 1fr;
   }
@@ -3388,6 +3643,10 @@ dt {
 
   .glossary-hero h1 {
     font-size: 40px;
+  }
+
+  .guide-section h2 {
+    font-size: 26px;
   }
 
   .hero-copy h1 {
@@ -3435,6 +3694,7 @@ dt {
   .glossary-preview-grid,
   .glossary-page,
   .glossary-hero > div,
+  .guide-section,
   .methodology-grid,
   .premium-grid,
   .premium-funnel,
@@ -3526,6 +3786,18 @@ dt {
 
   .glossary-hero h1 {
     font-size: 32px;
+  }
+
+  .guide-formula span {
+    width: 100%;
+  }
+
+  .guide-section {
+    padding: 22px;
+  }
+
+  .guide-section h2 {
+    font-size: 24px;
   }
 
   .hero-copy h1 {

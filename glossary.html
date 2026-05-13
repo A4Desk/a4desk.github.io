@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Глоссарий Alpha Four Desk: GEX, Flip, A1, гамма-режим, P/C, отмена идеи и сценарная методология. Прогнозы выходят каждый день после 08:00 GMT.">
-  <title>Глоссарий | Alpha Four Desk</title>
+  <meta name="description" content="Как читать прогноз A4Desk: режим, база, Flip, A1, acceptance, цели, риск и слом сценария простыми словами.">
+  <title>Как читать прогноз A4Desk | Alpha Four Desk</title>
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://a4desk.github.io/glossary.html">
-  <meta property="og:title" content="Глоссарий | Alpha Four Desk">
-  <meta property="og:description" content="Термины Alpha Four Desk: GEX, Flip, A1, гамма-режим, P/C, отмена идеи и сценарная методология. Прогнозы выходят каждый день после 08:00 GMT.">
+  <meta property="og:title" content="Как читать прогноз A4Desk | Alpha Four Desk">
+  <meta property="og:description" content="Практическая инструкция A4Desk: как использовать GEX-прогноз, уровни и поведение цены без ложной уверенности.">
   <meta property="og:image" content="https://a4desk.github.io/images/hero-a4desk-dashboard-dark.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Глоссарий | Alpha Four Desk">
-  <meta name="twitter:description" content="Термины Alpha Four Desk: GEX, Flip, A1, гамма-режим, P/C, отмена идеи и сценарная методология. Прогнозы выходят каждый день после 08:00 GMT.">
+  <meta name="twitter:title" content="Как читать прогноз A4Desk | Alpha Four Desk">
+  <meta name="twitter:description" content="Режим, база, магнит, барьер, acceptance, цели и invalidation в одной практической инструкции.">
   <meta name="twitter:image" content="https://a4desk.github.io/images/hero-a4desk-dashboard-dark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="images/afd-logo-dark.svg" as="image" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=57">
+  <link rel="stylesheet" href="styles.css?v=59">
 </head>
 <body>
   <header class="header">
     <a class="brand" href="index.html" aria-label="Alpha Four Desk">
       <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
-      <strong>Alpha Four Desk<small>Ежедневная рыночная карта</small></strong>
+      <strong><span class="brand-word">Alpha <span class="brand-four">Four</span> Desk</span><small>Ежедневная рыночная карта</small></strong>
     </a>
     <nav id="primary-nav" aria-label="Основная навигация">
       <a href="index.html#what">О нас</a>
@@ -32,7 +32,8 @@
       <a href="index.html#methodology">Метод</a>
       <a href="index.html#sample">Пример</a>
       <a href="index.html#premium-sample">Премиум</a>
-      <a href="index.html#glossary">Глоссарий</a>
+      <a href="index.html#forecast-vs-fact">Факт</a>
+      <a href="glossary.html" aria-current="page">Как читать</a>
       <a href="index.html#plans">Цены</a>
       <a href="index.html#faq">Вопросы</a>
     </nav>
@@ -63,88 +64,216 @@
   </header>
 
   <main>
-    <section class="glossary-hero">
+    <section class="glossary-hero guide-hero">
       <div>
         <a class="back-link" href="index.html">← На главную</a>
-        <p class="eyebrow">Глоссарий</p>
-        <h1>Термины и сокращения Alpha Four Desk</h1>
-        <p>Короткий словарь языка, который мы используем в ежедневной аналитике: уровни, гамма-режим, позиционирование и сценарная методология. Прогнозы выходят каждый день после 08:00 GMT.</p>
+        <p class="eyebrow">Как читать прогноз</p>
+        <h1>Как использовать GEX-прогноз, уровни и поведение цены</h1>
+        <p>Это практическая инструкция A4Desk: что означает каждый уровень, где сценарий живёт, где он подтверждается, где появляется сделка и где идея перестаёт быть рабочей.</p>
+        <div class="guide-formula" aria-label="Главная формула A4Desk">
+          <span>режим</span>
+          <span>база</span>
+          <span>магнит</span>
+          <span>барьер</span>
+          <span>acceptance</span>
+          <span>цель</span>
+          <span>invalidation</span>
+        </div>
       </div>
     </section>
 
-    <section class="glossary-page">
-      <section class="glossary-category">
-        <h2>Основные термины</h2>
-        <div class="glossary-term-grid">
-          <article><h3>GEX</h3><small>Gamma Exposure</small><p>Показатель гамма-экспозиции опционного рынка. Помогает понять, где дилерское хеджирование может стабилизировать цену или, наоборот, усиливать движение.</p></article>
-          <article><h3>Flip</h3><small>Gamma Flip</small><p>Уровень, где рыночный гамма-режим меняется. Ниже и выше этого уровня поведение цены и дилеров может существенно отличаться.</p></article>
-          <article><h3>A1</h3><small>Nearest Magnet / Anchor Level</small><p>Ближайший уровень притяжения цены. Часто выступает магнитом внутри дня и служит ключевой точкой для сценария.</p></article>
-          <article><h3>MS</h3><small>Major Call Wall / Max Resistance</small><p>Крупный опционный уровень сверху, где сосредоточен значимый call interest. Часто работает как зона сопротивления или верхний барьер.</p></article>
-          <article><h3>MV</h3><small>Major Put Wall / Max Vulnerability</small><p>Крупный опционный уровень снизу, где сосредоточен значимый put interest. Часто работает как зона поддержки или нижний барьер.</p></article>
-          <article><h3>OI</h3><small>Open Interest</small><p>Открытый интерес. Показывает объём действующих опционных позиций на конкретных страйках и сроках.</p></article>
-          <article><h3>0DTE</h3><small>Zero Days to Expiration</small><p>Опционы, истекающие сегодня. Эти уровни часто особенно важны для внутридневной динамики.</p></article>
-          <article><h3>24h DTE</h3><small>One-Day-to-Expiration Structure</small><p>Ближайшая дневная опционная структура, которая часто задаёт рабочую механику текущего торгового дня.</p></article>
+    <section class="glossary-page guide-page">
+      <section class="guide-section guide-intro">
+        <div class="guide-lead">
+          <h2>A4Desk — это не “купить / продать”</h2>
+          <p>A4Desk — это карта поведения рынка. Она не обещает, что цена точно пойдёт в одну сторону. Она показывает, где рынок должен удержаться, куда его может притягивать, где стоит барьер, что будет подтверждением и где сценарий ломается.</p>
+        </div>
+        <div class="guide-note">
+          <strong>Главный принцип</strong>
+          <p>Сценарий есть, но рынок должен его подтвердить. Уровень сам по себе не сигнал. Сигнал появляется только тогда, когда цена показывает правильное поведение относительно уровня.</p>
         </div>
       </section>
 
-      <section class="glossary-category">
-        <h2>Рыночный режим</h2>
-        <div class="glossary-term-grid">
-          <article><h3>Positive Gamma</h3><p>Режим, при котором дилерское хеджирование чаще гасит движение цены. Обычно это связано с пиннингом, торговлей в диапазоне и возвратом к среднему.</p></article>
-          <article><h3>Negative Gamma</h3><p>Режим, при котором дилерское хеджирование чаще усиливает движение цены. Обычно это связано с направленным импульсом, продолжением пробоя и повышенной волатильностью.</p></article>
-          <article><h3>Pinning</h3><p>Сценарий, когда цена липнет к важному опционному уровню и торгуется вокруг него без сильного ухода.</p></article>
-          <article><h3>Mean Reversion</h3><p>Возврат цены к ключевому уровню или диапазону после отклонения.</p></article>
-          <article><h3>Acceptance</h3><p>Принятие цены рынком выше или ниже важного уровня. Это означает, что пробой не просто случился, а был удержан.</p></article>
-          <article><h3>Rejection</h3><p>Отвержение уровня. Цена подходит к важной зоне, но не удерживается и уходит обратно.</p></article>
+      <section class="guide-section">
+        <h2>1. Не направление, а качество сценария</h2>
+        <p>Обычный вопрос трейдера: “цена пойдёт вверх или вниз?” Вопрос A4Desk другой: “в каком режиме рынок и что он должен подтвердить?” Поэтому прогноз оценивает не только направление, но и качество сценария: цена у базы или у барьера, уровень принят или только коснулся, движение развивается или залипает, откат к базе — это коррекция или уже слом.</p>
+        <div class="guide-card-row">
+          <article><h3>Цена у базы</h3><p>Смотрим, защищают ли уровень. Удержание базы сохраняет сценарий, но ещё не означает готовность к продолжению.</p></article>
+          <article><h3>Цена у барьера</h3><p>Смотрим acceptance или rejection. Один уровень может быть магнитом, барьером или зоной залипания.</p></article>
+          <article><h3>Цена между уровнями</h3><p>Чаще лучше ждать. Сделка появляется там, где поведение цены подтверждает сценарий.</p></article>
         </div>
       </section>
 
-      <section class="glossary-category">
-        <h2>Торговые и поведенческие термины</h2>
-        <div class="glossary-term-grid">
-          <article><h3>Invalidation</h3><p>Уровень, при пробое которого сценарий считается сломанным.</p></article>
-          <article><h3>Stop</h3><p>Точка ограничения риска по сделке. Не всегда совпадает с уровнем отмены идеи.</p></article>
-          <article><h3>TP</h3><small>Take Profit</small><p>Цель или цели фиксации прибыли.</p></article>
-          <article><h3>Zone</h3><p>Рабочая область, где мы ждём реакцию рынка, а не точку с точностью до одного уровня.</p></article>
+      <section class="guide-section">
+        <h2>2. Режим рынка: positive gamma и negative gamma</h2>
+        <div class="guide-two">
+          <article>
+            <h3>Positive gamma — положительная гамма</h3>
+            <p>Рынок чаще склонен к стабилизации, диапазону, pinning — залипанию цены у уровней, mean reversion — возврату к средней зоне и гашению резких импульсов.</p>
+            <p><strong>Важно:</strong> positive gamma не означает автоматический long. Это тип поведения, а не команда на покупку.</p>
+          </article>
+          <article>
+            <h3>Negative gamma — отрицательная гамма</h3>
+            <p>Рынок становится резче и нервнее: движение может ускоряться, пробои могут быть сильнее, возвраты к уровню резче, а риск ложных входов выше.</p>
+            <p><strong>Важно:</strong> negative gamma не означает автоматический short. Она говорит, что рынок становится более импульсным.</p>
+          </article>
         </div>
       </section>
 
-      <section class="glossary-category">
-        <h2>Индикаторы позиционирования</h2>
-        <div class="glossary-term-grid">
-          <article><h3>MM</h3><small>Market Maker</small><p>Маркет-мейкер / дилер, который поддерживает двусторонний рынок и хеджирует опционные позиции.</p></article>
-          <article><h3>Call Wall</h3><p>Крупная зона call OI / gamma сверху. Часто выступает сопротивлением или зоной торможения.</p></article>
-          <article><h3>Put Wall</h3><p>Крупная зона put OI / gamma снизу. Часто выступает поддержкой или зоной стабилизации.</p></article>
-          <article><h3>P/C</h3><small>Put/Call Ratio</small><p>Соотношение put и call позиций. Используется как ориентир по настроению рынка.</p></article>
-          <article><h3>U/D</h3><small>Up/Down Positioning Balance</small><p>Баланс позиционирования выше и ниже текущей цены. Помогает понять, где рынок видит больший потенциал.</p></article>
-          <article><h3>More Above</h3><p>Смещение структуры вверх: выше цены сосредоточено больше значимых уровней или интереса.</p></article>
-          <article><h3>Balanced</h3><p>Сбалансированная структура, без явного перевеса вверх или вниз.</p></article>
+      <section class="guide-section">
+        <h2>3. Ключевые уровни</h2>
+        <div class="glossary-term-grid guide-term-grid">
+          <article><h3>Flip</h3><p>Граница режима. Выше Flip рынок чаще конструктивнее, ниже — слабее или резче. На самом Flip уверенность ниже, потому что рынок в переходной зоне.</p></article>
+          <article><h3>A1</h3><p>Важная зона активности / gamma peak. Может быть базой, магнитом, барьером, зоной pinning или уровнем проверки acceptance.</p></article>
+          <article><h3>Max Pain / MP</h3><p>Рабочий центр дня, магнит или зона залипания. MP не наносится как обязательный уровень разметки, а объясняется внутри логики сценария.</p></article>
+          <article><h3>P1 / P2</h3><p>Верхние зоны структуры. Могут быть сопротивлением, магнитом, барьером, зоной acceptance-test или расширенной целью.</p></article>
+          <article><h3>N1 / N2</h3><p>Нижние зоны риска: defensive zone, нижний магнит, зона ускорения вниз или область проверки базы после слома сценария.</p></article>
+          <article><h3>Invalidation</h3><p>Уровень, после которого базовый сценарий больше нельзя считать рабочим. Это не всегда то же самое, что stop по сделке.</p></article>
         </div>
       </section>
 
-      <section class="glossary-category">
-        <h2>Наша методология</h2>
-        <div class="glossary-term-grid">
-          <article><h3>Regime-First</h3><p>Подход, при котором сначала определяется гамма-режим рынка, а уже потом строится сценарий.</p></article>
-          <article><h3>Market Neutral Mindset</h3><p>Подход, при котором мы не угадываем направление, а работаем через сценарии, подтверждение и точки отмены идеи.</p></article>
-          <article><h3>Forecast vs Fact</h3><p>Честный разбор: что мы ожидали утром и что рынок реально сделал к концу дня.</p></article>
-          <article><h3>GEX Confirmation Filter</h3><p>Фильтр подтверждения сценария через реакцию на A1, удержание Flip, объёмы, принятие или отвержение уровня и корреляцию с BTC.</p></article>
-          <article><h3>Probability Calibration</h3><p>Подход к оценке вероятности сценария на основе совпадения нескольких факторов.</p></article>
+      <section class="guide-section">
+        <h2>4. Base alive, reclaim и acceptance</h2>
+        <div class="guide-two">
+          <article>
+            <h3>Base alive — база жива</h3>
+            <p>Цена удерживает ключевой уровень или область, от которой сценарий ещё имеет право на жизнь. Но это не значит, что движение уже должно продолжаться.</p>
+            <p><strong>Формула:</strong> base alive ≠ continuation-ready.</p>
+          </article>
+          <article>
+            <h3>Reclaim — возврат уровня под контроль</h3>
+            <p>Reclaim происходит, когда цена вернула важный уровень, закрепилась выше него, первый откат не вернул цену ниже, и уровень начал работать как база.</p>
+            <p><strong>Формула:</strong> touch is not reclaim — касание не равно возврату уровня под контроль.</p>
+          </article>
         </div>
+        <div class="guide-note">
+          <strong>Acceptance — принятие цены</strong>
+          <p>Уровень считается принятым, если после прохода цена удержала его на первом нормальном откате и уровень стал базой. Acceptance — это не количество свечей и не время. Это поведение цены после прохода уровня.</p>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <h2>5. Продолжение, коррекция и слом</h2>
+        <div class="guide-card-row">
+          <article><h3>Continuation</h3><p>Начинается не тогда, когда цена просто выше базы, а когда рынок удержал базу, вернул ключевой уровень, принял его и первый откат не сломал структуру.</p></article>
+          <article><h3>Коррекция к базе</h3><p>Цена возвращается к базе, но уровень защищают: нет закрепления ниже, появляется быстрый возврат, движение вниз не ускоряется.</p></article>
+          <article><h3>Слом сценария</h3><p>База перестаёт быть базой: цена закрепилась ниже, попытка вернуться провалилась, и уровень начал работать как сопротивление.</p></article>
+        </div>
+        <p><strong>Stop</strong> защищает конкретную сделку. <strong>Invalidation</strong> ломает сценарий. Можно получить stop по сделке, но сценарий ещё будет жив. И наоборот: если invalidation нарушена, сценарий уже сломан даже без сделки.</p>
+      </section>
+
+      <section class="guide-section">
+        <h2>6. Цели: required и extended</h2>
+        <div class="guide-two">
+          <article>
+            <h3>Required target — обязательная цель</h3>
+            <p>Первый логичный магнит, если базовый сценарий подтверждается. Если база держится и движение развивается, именно эта зона становится первым рабочим ориентиром.</p>
+          </article>
+          <article>
+            <h3>Extended target — расширенная цель</h3>
+            <p>Следующая цель, которая активируется только после acceptance обязательной цели. Если первая цель достигнута, но не принята, расширенная цель не становится качественной автоматически.</p>
+          </article>
+        </div>
+        <div class="guide-note">
+          <strong>Главная формула</strong>
+          <p>Цель выше цены не становится настоящей целью автоматически. Сначала нужно понять функцию уровня: магнит, барьер или зона залипания.</p>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <h2>7. Как использовать прогноз для сделки</h2>
+        <div class="guide-card-row four">
+          <article><h3>Long от базы</h3><p>Только если цена вернулась к базе и показала удержание. Если рынок не дал откат, вход от базы просто не появляется.</p></article>
+          <article><h3>Long по подтверждению</h3><p>После reclaim / acceptance следующего уровня, когда первый откат удержал новый уровень как базу.</p></article>
+          <article><h3>Short от барьера</h3><p>Если цена подошла к верхней зоне, но не приняла её и получила rejection — отбой.</p></article>
+          <article><h3>Short по слому</h3><p>Если база потеряна, ретест снизу провалился, а нижний магнит становится рабочей зоной.</p></article>
+        </div>
+        <p>Фраза “покупки от базы” не значит, что мы обязательно ждём падение к базе. Это значит: если рынок даст откат к базе и база удержится, там появляется логичная зона сделки.</p>
+      </section>
+
+      <section class="guide-section">
+        <h2>8. Поведенческие модели A4Desk</h2>
+        <div class="guide-model-grid">
+          <article><span>01</span><h3>Base alive</h3><p>Сценарий ещё не сломан, но движение не обязательно готово продолжаться.</p></article>
+          <article><span>02</span><h3>Continuation-ready</h3><p>База удержана, ключевой уровень принят, движение может идти к следующей зоне.</p></article>
+          <article><span>03</span><h3>Sticky-positive</h3><p>GEX поддерживает рынок, но цена залипает и не даёт сильного раскрытия.</p></article>
+          <article><span>04</span><h3>Reclaim-first</h3><p>Цена ниже важного уровня и должна сначала вернуть его под контроль.</p></article>
+          <article><span>05</span><h3>Acceptance-test</h3><p>Цена дошла до уровня, но нужно увидеть, стал ли он базой.</p></article>
+          <article><span>06</span><h3>Failed acceptance</h3><p>Цена прошла уровень, но откат вернул её обратно.</p></article>
+          <article><span>07</span><h3>Contested</h3><p>Сигналы смешанные. Вероятность ниже. Цели осторожнее.</p></article>
+          <article><span>08</span><h3>Defensive mode</h3><p>База потеряна. Рынок смотрит к нижним зонам.</p></article>
+          <article><span>09</span><h3>Expansion-ready</h3><p>Уровень принят, путь к цели открыт, структура поддерживает движение.</p></article>
+          <article><span>10</span><h3>Bounce-to-reclaim</h3><p>Отскок сам по себе не сила. Сначала reclaim, затем acceptance и удержание.</p></article>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <h2>9. Как читать утренний прогноз</h2>
+        <ol class="guide-steps">
+          <li>Посмотреть режим.</li>
+          <li>Найти базу.</li>
+          <li>Найти Flip.</li>
+          <li>Найти A1.</li>
+          <li>Понять главный магнит.</li>
+          <li>Понять барьер.</li>
+          <li>Посмотреть invalidation.</li>
+          <li>Разделить обязательную и расширенную цель.</li>
+          <li>Проверить, где находится цена сейчас.</li>
+          <li>Понять тип сделки: от базы, по подтверждению, от барьера или по слому.</li>
+        </ol>
+      </section>
+
+      <section class="guide-section">
+        <h2>10. Частые ошибки и шпаргалка</h2>
+        <div class="guide-two">
+          <article>
+            <h3>Частые ошибки</h3>
+            <ul>
+              <li>positive gamma = только long;</li>
+              <li>цена выше базы = надо покупать сейчас;</li>
+              <li>касание уровня = reclaim;</li>
+              <li>цена дошла до цели = сценарий полностью отработал;</li>
+              <li>уровень выше цены = цель;</li>
+              <li>откат к базе = обязательно long.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Шпаргалка A4Desk</h3>
+            <ul>
+              <li>база держится → сценарий жив;</li>
+              <li>база потеряна → сценарий ломается;</li>
+              <li>уровень коснулись → ничего не доказано;</li>
+              <li>уровень вернули и удержали → reclaim;</li>
+              <li>первый откат удержал уровень → acceptance;</li>
+              <li>расширенная цель → только после acceptance обязательной цели.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="guide-section guide-final">
+        <h2>Главная формула для трейдера</h2>
+        <p>Не спрашивать: “куда цена пойдёт?” Спрашивать: “где сценарий жив, где он подтверждается, где он даёт сделку и где он ломается?”</p>
+        <a class="button primary" href="index.html#plans">Получить ежедневную карту</a>
       </section>
     </section>
   </main>
 
   <footer class="footer">
     <div>
-      <div class="footer-brand"><span class="brand-mark inverse"><i></i><i></i><i></i><i></i></span><strong>Alpha Four Desk<small>Ежедневная рыночная карта</small></strong></div>
-      <p>Ежедневная карта рынка по BTC, ETH и SOL: контекст, уровни, сценарии и риск. Прогнозы выходят каждый день после 08:00 GMT.</p>
+      <a class="footer-brand" href="index.html">
+        <span class="brand-mark inverse"><i></i><i></i><i></i><i></i></span>
+        <strong>Alpha Four Desk</strong>
+      </a>
+      <p>Ежедневная рыночная карта BTC, ETH и SOL: уровни, сценарии, риск и логика дня.</p>
     </div>
-    <div class="footer-risk">
-      <strong>Предупреждение о рисках</strong>
-      <p>Материалы Alpha Four Desk — это исследовательская аналитика и сценарный разбор, а не торговые сигналы. Любое решение, размер позиции и риск пользователь определяет самостоятельно.</p>
+    <div class="footer-links">
+      <a href="index.html#plans">Тарифы</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="https://t.me/A4DeskAccessBot" target="_blank" rel="noreferrer">Telegram-бот</a>
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="script.js?v=4"></script>
 </body>
 </html>
